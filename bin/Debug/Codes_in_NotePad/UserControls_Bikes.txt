@@ -1,0 +1,804 @@
+using Microsoft.Office.Interop.Access.Dao;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.OleDb;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Velocity_Bike_Shop_Managemennt_System.User_Guest.U_Dashboard.Products;
+
+namespace Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard
+{
+    public partial class UserControlABikes : UserControl
+    {
+        private DataGridView dgvBills;
+        public UserControlABikes()
+        {
+            InitializeComponent();
+        }
+
+        OleDbConnection? con;
+        OleDbDataAdapter? da;
+        OleDbCommand? cmd;
+        DataSet? ds;
+
+        public DataGridView DgvBills
+        {
+            set { dgvBills = value; }
+        }
+
+        private void btnXTC_SLR_29_2_2022_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant XTC SLR 29 2 2022";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnTranceX_29_2_2022_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Trance X 29 2 2022";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btn_TranceX_29_1_2022_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Trance X 29 1 2022";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnTalon_29_2_2022_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Talon 29 2 2022";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnTalon_29_1_2024_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Talon 29 1 2024";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnStance_29_2_2022_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Stance 29 2 2022";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnStance_29_1_2022_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Stance 29 1 2022";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnRevolt_2_2022_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Revolt 2 2022";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnRevolt_1_2024_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Revolt 1 2024";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnPropelAdvanced_1_2024_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Propel Advanced 1 2024";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnFathom_29_2_2021_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant FATHOM 29 2 2021";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnDefy_Advanced_2_2024_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Defy Advanced 2 2024";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnDefy_Advanced_2_2022_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Defy Advanced 2 2022";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnContend_AR_1_2022_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Gil Bernard\\source\\repos\\Velocity_Bike Shop Managemennt System\\Velocity_Bike Shop Managemennt System\\bin\\Debug\\Databases\\DataBase_Velocity-Bike Shop Management System\\db_Velocity-BikeShop.accdb";
+
+            string productName = "Giant Contend AR 1 2022";
+            int initialQuantity = 1;
+
+            string querySelect = "SELECT Name, Price, Stocks FROM tbl_Bikes WHERE Name = @Bname";
+            string queryUpdate = "UPDATE tbl_Bikes SET Stocks = Stocks - @Quantity WHERE Name = @Bname";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                OleDbCommand commandSelect = new OleDbCommand(querySelect, connection);
+                commandSelect.Parameters.AddWithValue("@Bname", productName);
+
+                try
+                {
+                    connection.Open();
+                    OleDbDataReader reader = commandSelect.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string bikeName = reader["Name"].ToString();
+                        double cost = Convert.ToDouble(reader["Price"]);
+                        int quantity = initialQuantity; // Set the quantity to initialQuantity
+
+                        int stocks = Convert.ToInt32(reader["Stocks"]);
+                        if (stocks > 0)
+                        {
+                            // Add item to DataGridView
+                            dgvBills.Rows.Add(bikeName, cost * quantity, quantity);
+
+                            // Deduct quantity from stocks
+                            OleDbCommand commandUpdate = new OleDbCommand(queryUpdate, connection);
+                            commandUpdate.Parameters.AddWithValue("@Quantity", quantity);
+                            commandUpdate.Parameters.AddWithValue("@Bname", productName);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stocks!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+    }
+}

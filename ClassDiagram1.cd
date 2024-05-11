@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.UserControlAAccessories" Collapsed="true">
+    <Position X="6.25" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>hAIgEokAQyIzSUUA6gC6gWQGQYhoQCQYYVpi0UAEIyo=</HashCode>
+      <FileName>Admin\A_Dashboard\Products\UserControlAAccessories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.UserControlABikes" Collapsed="true">
+    <Position X="10.75" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>xAIgfpAAwCQRsyRAggCBaYAGCACAABJBYAEycBHAAwg=</HashCode>
+      <FileName>Admin\A_Dashboard\Products\UserControlABikes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.UserControlAComponents" Collapsed="true">
+    <Position X="8.5" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>qIIjAgoAoXBpJAUUkCiZU0aaxAAMEAQAMQuiBcQCEEI=</HashCode>
+      <FileName>Admin\A_Dashboard\Products\UserControlAComponents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.Manage_Inventory" Collapsed="true">
+    <Position X="3.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>q5CoKVqa7/6T8ayI/YLBnRq/tN68p4C3SMFTCLPhT1o=</HashCode>
+      <FileName>Admin\A_Dashboard\Manage_Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.ManageUsersAccount" Collapsed="true">
+    <Position X="1.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>iQA4RyKKHLIQiZSIZACBBQgOZGCAIAIGWEILQKSsRoA=</HashCode>
+      <FileName>Admin\A_Dashboard\ManageUsersAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.View_Inventory_List" Collapsed="true">
+    <Position X="3.25" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gQAoAAKKCCAQoKSABACBBQCCIACAgAAiAEACAKCgsgo=</HashCode>
+      <FileName>Admin\A_Dashboard\View_Inventory_List.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.AdminDashboard" Collapsed="true">
+    <Position X="1.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hSNKtiPKCCGYiIYABYCDAAAyIMCCECYSCFoICaigggQ=</HashCode>
+      <FileName>Admin\A_Dashboard\AdminDashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.AdminLoginPage" Collapsed="true">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAoAgAgAKQAEBwAAASAAYACAECACsBAAgAAAQBAAgA=</HashCode>
+      <FileName>Admin\LoginForm\AdminLoginPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.SignupPage" Collapsed="true">
+    <Position X="8" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IDAqAAAgACRAABUBAACQUYACAEiAgEhAAMAAAQBAAgA=</HashCode>
+      <FileName>User_Guest\SignupForm\SignupPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.UsersDashboard" Collapsed="true">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAKcISIACSIGYAADQChRAEjAcCAiAACAAAgAeAQAgA=</HashCode>
+      <FileName>User_Guest\U_Dashboard\UsersDashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.Splash_screen" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQACAAAAAAAACAAAACAAAAIAAAAAAAAABAAAA=</HashCode>
+      <FileName>Splash_screen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.startPage" Collapsed="true">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAgoAgA4CCQAEAaAAICAAQACAEyACsAAAkQAYABCAgA=</HashCode>
+      <FileName>startPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.User_Guest.Forget_Password.ForgetPasswordPage" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAABAgACQAQBQAAgKAAYACAMAAgEBAAAAAAQBBAIA=</HashCode>
+      <FileName>User_Guest\Forget_Password\ForgetPasswordPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.User_Guest.U_Dashboard.Products.UserControlAccessories" Collapsed="true">
+    <Position X="6.25" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAIEFh0IRSwXecdE6gCoyG8GaJloQC0Ycfpi0WZccy4=</HashCode>
+      <FileName>User_Guest\U_Dashboard\Products\UserControlAccessories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.User_Guest.U_Dashboard.Products.UserControlBikes" Collapsed="true">
+    <Position X="10.75" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>VAMQbpAhwCQR+zVAAtCxbIFKTACVAhBBQAEwcYnSAwk=</HashCode>
+      <FileName>User_Guest\U_Dashboard\Products\UserControlBikes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.User_Guest.U_Dashboard.Products.UserControlComponents" Collapsed="true">
+    <Position X="8.5" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>KIoCQy6Is2RJdhUk0CrRVk6zzMAdMQ0AdUimCWQykEI=</HashCode>
+      <FileName>User_Guest\U_Dashboard\Products\UserControlComponents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.User_Guest.U_Dashboard.UserProducts" Collapsed="true">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hCAuEAyAISaQWIQQDQChEREiiGCAEEACA5EigeAWqhI=</HashCode>
+      <FileName>User_Guest\U_Dashboard\UserProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Windows.Forms.Form" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Forms.UserControl" Collapsed="true">
+    <Position X="8.75" Y="5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Forms.ContainerControl" Collapsed="true">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Velocity_Bike_Shop_Managemennt_System.Rating.UserControlRating" Collapsed="true">
+    <Position X="11" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAQAQDCAAAAAAAACAAAACkAAEAgEAgAAAAAAABQA=</HashCode>
+      <FileName>Rating\UserControlRating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

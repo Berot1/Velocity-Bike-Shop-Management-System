@@ -1,0 +1,52 @@
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.exe
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.deps.json
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.runtimeconfig.json
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.pdb
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.Properties.Resources.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.startPage.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.csproj.GenerateResource.cache
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.AssemblyInfoInputs.cache
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.AssemblyInfo.cs
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.csproj.CoreCompileInputs.cache
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\refint\Velocity_Bike Shop Managemennt System.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.pdb
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.genruntimeconfig.cache
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\ref\Velocity_Bike Shop Managemennt System.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.Splash_screen.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.SignupPage.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\System.Data.OleDb.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.csproj.AssemblyReference.cache
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Access.Dao.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike Shop Managemennt System.csproj.ResolveComReference.cache
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity.01A123E0.Up2Date
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.AdminLoginPage.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\Guna.UI2.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.UsersDashboard.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.User_Guest.Forget_Password.ForgetPasswordPage.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.ManageUsersAccount.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.Admin_POS.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.User_Guest.U_Dashboard.UserProducts.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.User_Guest.U_Dashboard.Products.UserControlBikes.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.User_Guest.U_Dashboard.Products.UserControlComponents.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.User_Guest.U_Dashboard.Products.UserControlAccessories.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.UserControlABikes.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.UserControlAComponents.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.UserControlAAccessories.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.Manage_Inventory.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\OxyPlot.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\OxyPlot.WindowsForms.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard.View_Inventory_List.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.AdminDashboard.resources
+C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\obj\Debug\net6.0-windows\Velocity_Bike_Shop_Managemennt_System.Rating.UserControlRating.resources

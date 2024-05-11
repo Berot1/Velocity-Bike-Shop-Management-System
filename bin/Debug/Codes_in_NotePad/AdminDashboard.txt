@@ -1,0 +1,252 @@
+using Microsoft.Office.Interop.Access.Dao;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.OleDb;
+using System.Diagnostics.Eventing.Reader;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Velocity_Bike_Shop_Managemennt_System.Admin.A_Dashboard;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
+namespace Velocity_Bike_Shop_Managemennt_System
+{
+    public partial class AdminDashboard : Form
+    {
+        bool sidebarExpand;
+        public Point mouseLocation;
+        public AdminDashboard()
+        {
+            InitializeComponent();
+            sidebarExpand = false;
+            sidebar.Width = sidebar.MinimumSize.Width;
+        }
+
+        public void loadform(object Form)
+        {
+            if (this.sidebar.Controls.Count > 0)
+                this.sidebar.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Left;
+            this.sidebar.Controls.Add(f);
+            this.sidebar.Tag = f;
+            f.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new startPage().Show();
+            this.Hide();
+        }
+
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                sidebar.Width -= 10;
+                if (sidebar.Width == sidebar.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sidebarTimer.Stop();
+                }
+            }
+            else
+            {
+                sidebar.Width += 10;
+                if (sidebar.Width == sidebar.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void mouse_Down(object sender, MouseEventArgs e)
+        {
+            mouseLocation = new Point(-e.X, -e.Y);
+        }
+
+        private void mouse_Move(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
+        }
+        private void btnManageInventory_Click(object sender, EventArgs e)
+        {
+            new ManageInventory().Show();
+            this.Hide();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            new AdminDashboard().Show();
+            this.Hide();
+        }
+
+        private void btnUserManage_Click(object sender, EventArgs e)
+        {
+            new ManageUsersAccount().Show();
+            this.Hide();
+        }
+
+        private void panelUsers_Paint(object sender, PaintEventArgs e)
+        {
+            // Establish a connection to your MS Access database
+            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\Databases\DataBase_Velocity-Bike Shop Management System\db_Velocity-BikeShop.accdb";
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                connection.Open();
+
+                // Execute a SQL query to retrieve the number of users
+                string query = "SELECT COUNT(*) FROM tbl_Users";
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    int userCount = (int)command.ExecuteScalar();
+
+                    // Update the text of the Users panel with the user count
+                    tbxNumberUsers.Text = userCount.ToString();
+                }
+
+                // Execute additional queries and update other panel text as needed
+            }
+        }
+
+        private void panelTotalStocks_Paint(object sender, PaintEventArgs e)
+        {
+            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\Databases\DataBase_Velocity-Bike Shop Management System\db_Velocity-BikeShop.accdb";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query1 = "SELECT SUM(Stocks) FROM tbl_Bikes";
+                    string query2 = "SELECT SUM(Stocks) FROM tbl_Components";
+                    string query3 = "SELECT SUM(Stocks) FROM tbl_Accessories";
+
+                    double totalBikesStock = 0;
+                    double totalComponentsStock = 0;
+                    double totalAccessoriesStock = 0;
+
+                    using (OleDbCommand command1 = new OleDbCommand(query1, connection))
+                    {
+                        object result = command1.ExecuteScalar();
+                        if (result != null)
+                        {
+                            totalBikesStock = Convert.ToDouble(result);
+                        }
+                    }
+
+                    using (OleDbCommand command2 = new OleDbCommand(query2, connection))
+                    {
+                        object result = command2.ExecuteScalar();
+                        if (result != null)
+                        {
+                            totalComponentsStock = Convert.ToDouble(result);
+                        }
+                    }
+
+                    using (OleDbCommand command3 = new OleDbCommand(query3, connection))
+                    {
+                        object result = command3.ExecuteScalar();
+                        if (result != null)
+                        {
+                            totalAccessoriesStock = Convert.ToDouble(result);
+                        }
+                    }
+
+                    double totalStocks = totalBikesStock + totalComponentsStock + totalAccessoriesStock;
+                    tbxTotalStocks.Text = totalStocks.ToString();
+                }
+                catch (OleDbException ex)
+                {
+                    MessageBox.Show($"An error occurred while executing the query: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void panelBrands_Paint(object sender, PaintEventArgs e)
+        {
+            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Gil Bernard\source\repos\Velocity_Bike Shop Managemennt System\Velocity_Bike Shop Managemennt System\bin\Debug\Databases\DataBase_Velocity-Bike Shop Management System\db_Velocity-BikeShop.accdb";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query1 = "SELECT COUNT(*) FROM (SELECT DISTINCT Brand FROM tbl_Bikes)";
+                    string query2 = "SELECT COUNT(*) FROM (SELECT DISTINCT Brand FROM tbl_Components)";
+                    string query3 = "SELECT COUNT(*) FROM (SELECT DISTINCT Brand FROM tbl_Accessories)";
+
+                    int totalBikesBrands = 0;
+                    int totalComponentsBrands = 0;
+                    int totalAccessoriesBrands = 0;
+
+                    Console.WriteLine($"Query 1: {query1}");
+                    using (OleDbCommand command1 = new OleDbCommand(query1, connection))
+                    {
+                        totalBikesBrands = (int)command1.ExecuteScalar();
+                        Console.WriteLine($"Total bikes brands: {totalBikesBrands}");
+                    }
+
+                    Console.WriteLine($"Query 2: {query2}");
+                    using (OleDbCommand command2 = new OleDbCommand(query2, connection))
+                    {
+                        totalComponentsBrands = (int)command2.ExecuteScalar();
+                        Console.WriteLine($"Total components brands: {totalComponentsBrands}");
+                    }
+
+                    Console.WriteLine($"Query 3: {query3}");
+                    using (OleDbCommand command3 = new OleDbCommand(query3, connection))
+                    {
+                        totalAccessoriesBrands = (int)command3.ExecuteScalar();
+                        Console.WriteLine($"Total accessories brands: {totalAccessoriesBrands}");
+                    }
+
+                    int totalBrands = totalBikesBrands + totalComponentsBrands + totalAccessoriesBrands;
+                    tbxTotalBrands.Text = totalBrands.ToString();
+                }
+                catch (OleDbException ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnPOS_Click(object sender, EventArgs e)
+        {
+            new Admin_POS().Show();
+            this.Hide();
+        }
+
+        private void btnAProducts_Click(object sender, EventArgs e)
+        {
+            new Manage_Products().Show();
+            this.Hide();
+        }
+    }
+}
